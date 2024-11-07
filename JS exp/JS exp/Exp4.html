@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String comparision</title>
+    <style>
+
+body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #result {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Experiment 4</h1>
+    <h2>String Operations</h2>
+    <label for="inputString1">Enter a string1:</label>
+    <input type="text" id="inputString1" placeholder="Enter string1">
+    <label for="inputString2">Enter a string2:</label>
+    <input type="text" id="inputString2" placeholder="Enter string2">
+    <button onclick="localCompare()">Compare strings using localCompare Method</button>
+    <button onclick="strictEquality()">Compare strings using strictEquality Method</button>
+    <button onclick="comparebylength()">Compare strings using length property and comparision operators</button>
+    <div id="result"></div>
+</div>
+    <script src="Exp4.js"></script>
+</body>
+</html>

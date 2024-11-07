@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+</head>
+<body>
+    <form action="\Exp_3_1.html" method="get">
+        <h1>String Operations</h1>
+        <h3>Name: Vedant Chakkarwar <br>
+            Roll No: 42487 <br>
+            Div : BE-08 <br>
+            Batch: S-08 <br>
+        </h3>
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" placeholder="Enter a String">
+        <br><br>
+
+        <h3>Reverse String</h3>
+        <button type="button" onclick="reverseString()">Reverse</button>
+        <p id="reverseResult"></p>
+
+        <h3>Replace Characters</h3>
+        <label for="findChar">Find:</label>
+        <input type="text" id="findChar" placeholder="Enter a Char to Find">
+        <label for="replaceChar">Replace with:</label>
+        <input type="text" id="replaceChar" placeholder="Enter a Char to Replace">
+        <button type="button" onclick="replaceCharacters()">Replace</button>
+        <p id="replaceResult"></p>
+
+        <h3>Check Palindrome</h3>
+        <button type="button" onclick="checkPalindrome()">Check Palindrome</button>
+        <p id="palindromeResult"></p>
+        <script src="Exp_3.js"></script>
+        <button type="submit" >Next</button>
+    </form>
+</body>
+</html>

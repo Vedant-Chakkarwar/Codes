@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Area</title>
+  <style>
+    .calculator-box {
+      border: 1px solid #000;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 300px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body style="text-align: center;">
+  <h1>Experiment 1</h1>
+  <h1>Area of different shapes</h1>
+  <div class="calculator-box">
+    <h2>Area of Triangle</h2> <label for="side1">Enter Side 1: </label> <input type="number" id="side1"><br><br> <label
+      for="side2">Enter Side 2: </label> <input type="number" id="side2"><br><br> <label for="side3">Enter Side 3:
+    </label> <input type="number" id="side3"><br><br> <button id="calculateTriangleButton"
+      onclick="areaofTriangle()">Calculate Area</button>
+    <p id="triangleResult"></p>
+  </div>
+  <div class="calculator-box">
+    <h2>Area of Rectangle</h2> <label for="length">Enter the Length: </label> <input type="number" id="len"></br> </br>
+    <label for="breadth">Enter the Breadth: </label> <input type="number" id="bre"></br> <br> <button
+      id="calculateButton" onclick="areaofRectangle()">Calculate Area</button>
+    <p id="result"></p>
+  </div>
+  <div class="calculator-box">
+    <h2>Area of Circe</h2> <label for="length">Enter the Radius: </label> <input type="number" id="rad"></br> <br>
+    <button id="calculateButton" onclick="areaofCircle()">Calculate Area</button>
+    <p id="result2"></p>
+  </div>
+  <script src="Exp1.js"></script>
+</body>
+
+</html>

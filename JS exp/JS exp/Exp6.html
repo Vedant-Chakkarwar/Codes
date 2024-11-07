@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1em;
+            color: #555;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 1em;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1em;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Experiment 6</h1>
+        <h1>Array Operations</h1>
+        
+        <div>
+            <label for="1">Enter Length:</label>
+            <input type="number" id="1">
+            <button onclick="length()">Set Length</button>
+        </div>
+        
+        <div>
+            <label for="2">Enter Array (comma-separated):</label>
+            <input type="text" id="2">
+            <button onclick="arrayip()">Set Array</button>
+        </div>
+    
+        <div>
+            <label for="delete">Delete Element:</label>
+            <input type="text" id="delete">
+            <button onclick="del()">Delete</button>
+        </div>
+        
+        <div>
+            <label for="find">Find Element:</label>
+            <input type="text" id="find">
+            <button onclick="find()">Find</button>
+        </div>
+    
+        <div>
+            <button onclick="Empty()">Empty Array</button>
+        </div>
+    
+        <div>
+            <button onclick="Display()">Display Array</button>
+        </div>
+        
+        <h2>Results:</h2>
+        <p id="res"></p>
+        <p id="res2"></p>
+    </div>
+
+    <script src="Exp6.js"></script>
+</body>
+</html>

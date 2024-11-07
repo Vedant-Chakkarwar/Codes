@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container input, .container button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+        }
+        .reset-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 1em;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .reset-btn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Experiment 3</h1>
+        <h2>String Operations</h2>
+        
+        <!-- First Parameter: String Length and Replace -->
+        <label for="inputString">Enter a string:</label>
+        <input type="text" id="inputString" placeholder="Enter your string">
+        
+        <label for="replaceChar">Character to Replace:</label>
+        <input type="text" id="replaceChar" placeholder="Character to replace">
+        
+        <label for="withChar">Replace With:</label>
+        <input type="text" id="withChar" placeholder="Replace with">
+        
+        <button onclick="replaceCharacter()">Replace Character</button>
+        <p id="replaceResult"></p>
+        
+        <!-- Palindrome Check -->
+        <label for="palindromeString">Enter a string to check palindrome:</label>
+        <input type="text" id="palindromeString" placeholder="Enter string">
+        <button onclick="checkPalindrome()">Check Palindrome</button>
+        <p id="palindromeResult"></p>
+        
+        <!-- Reverse String -->
+        <button onclick="reverseString()">Reverse String</button>
+        <p id="reverseResult"></p>
+        
+        <!-- Reset Button -->
+        <button class="reset-btn" onclick="resetForm()">Reset</button>
+    </div>
+    
+    <script src="Exp3.js"></script>
+</body>
+</html>

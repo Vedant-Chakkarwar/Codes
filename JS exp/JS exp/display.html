@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Student Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #007BFF;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        p strong {
+            color: #333;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Entered Information</h2>
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+        <p><strong>City:</strong> <span id="city"></span></p>
+        <p><strong>State:</strong> <span id="state"></span></p>
+        <p><strong>Gender:</strong> <span id="gender"></span></p>
+        <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+
+        <a href="index.html" class="back-button">Go Back to Form</a>
+    </div>
+
+    <script>
+        // Retrieve stored data from localStorage
+        document.getElementById('name').textContent = localStorage.getItem("name");
+        document.getElementById('address').textContent = localStorage.getItem("address");
+        document.getElementById('city').textContent = localStorage.getItem("city");
+        document.getElementById('state').textContent = localStorage.getItem("state");
+        document.getElementById('gender').textContent = localStorage.getItem("gender");
+        document.getElementById('mobile').textContent = localStorage.getItem("mobile");
+        document.getElementById('email').textContent = localStorage.getItem("email");
+    </script>
+
+</body>
+</html>

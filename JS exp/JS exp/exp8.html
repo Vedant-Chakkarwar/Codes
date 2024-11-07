@@ -1,0 +1,154 @@
+<!--
+Roll No: 42122
+Name: Aditya Ghadge
+Batch: R5
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Over & Focus Events</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        /* General styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+
+        /* Container for columns */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1200px;
+            height: calc(100vh - 100px); /* Adjust height to subtract header space */
+            padding: 20px;
+            box-sizing: border-box;
+            gap: 20px;
+        }
+
+        /* Column styling */
+        .column {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: background-color 0.3s;
+        }
+
+        .column h2 {
+            font-size: 1.8em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .column p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        button {
+            width: 150px;
+            height: 50px;
+            font-size: 16px;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            align-self: center;
+            margin-top: auto;
+        }
+
+        button:hover {
+            background-color: #005f73;
+            transform: translateY(-3px);
+        }
+
+        button:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 140, 186, 0.6);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                align-items: center;
+            }
+
+            .column {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Experiment 8</h1>
+    <h1>Mouse Over & Focus Event</h1>
+    <div class="container">
+        <div class="column" id="hoverColumn">
+            <h2>On Mouse Over</h2>
+            <p>The <strong>onmouseover</strong> event occurs when the user moves the mouse pointer over an element. In this case, hovering over the button will change the background color of this column.</p>
+            <button id="hoverButton" onmouseover="changeHoverColumnColor()" onmouseout="resetHoverColumnColor()">Hover over me!</button>
+        </div>
+        <div class="column" id="focusColumn">
+            <h2>On Focus</h2>
+            <p>The <strong>onfocus</strong> event occurs when an element (like a button or input) gains focus. Clicking on the button will focus on it and change the background color of this column.</p>
+            <button id="focusButton" tabindex="1" onfocus="changeFocusColumnColor()" onblur="resetFocusColumnColor()">Focus on me!</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions to change the background of the respective column
+
+        // Change color of the column on hover
+        function changeHoverColumnColor() {
+            document.getElementById('hoverColumn').style.backgroundColor = "#f0e68c"; // Light yellow
+        }
+
+        function resetHoverColumnColor() {
+            document.getElementById('hoverColumn').style.backgroundColor = "#ffffff"; // Default white
+        }
+
+        // Change color of the column on focus
+        function changeFocusColumnColor() {
+            document.getElementById('focusColumn').style.backgroundColor = "#90ee90"; // Light green
+        }
+
+        function resetFocusColumnColor() {
+            document.getElementById('focusColumn').style.backgroundColor = "#ffffff"; // Default white
+        }
+    </script>
+</body>
+</html>

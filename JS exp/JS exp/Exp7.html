@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiment 7</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #007bff; /* Changed to a brighter blue */
+      margin-bottom: 20px;
+      font-size: 2em; /* Increased font size */
+      font-weight: bold; /* Made it bold */
+    }
+
+    h2 {
+      color: #333; /* Darker color for contrast */
+      margin-bottom: 10px;
+      font-size: 1.5em; /* Increased font size */
+      font-weight: bold; /* Made it bold */
+    }
+
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 80%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      color: #333;
+      font-size: 1em;
+      margin: 15px 0;
+    }
+
+    span {
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    hr {
+      margin: 20px 0;
+      border: none;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    
+    <hr>
+    <div>
+      <h1>Experiment 7</h1>
+      <h2>Enter Length</h2>
+      <input type="number" id="1" placeholder="Enter length">
+      <br>
+      <button onclick="length()">Set Length</button>
+    </div>
+    <p id="res"></p>
+    <hr>
+    <div>
+      <h2>Enter Elements</h2>
+      <input type="text" id="element" placeholder="Enter element">
+      <br>
+      <button onclick="addElement()">Add Element</button>
+    </div>
+    <p>Array: <span id="arrayOutput"></span></p>
+    <hr>
+
+    <div>
+      <h2>Enter Object Details</h2>
+      <input type="text" id="key" placeholder="Enter key">
+      <br>
+      <input type="text" id="value" placeholder="Enter value">
+      <br>
+      <button onclick="addKeyValuePair()">Add Key-Value Pair</button>
+    </div>
+
+    <p id="currentObject">Object: {}</p>
+    <br>
+    <hr>
+    <button onclick="saveObject()">Save Object to Array</button>
+  </div>
+
+  <script src="exp7.js"></script>
+</body>
+
+</html>
